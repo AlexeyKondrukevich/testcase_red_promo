@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "api",
     "books",
     "rest_framework",
+    "drf_yasg",
 ]
 
 MIDDLEWARE = [
