@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -87,8 +88,8 @@ WSGI_APPLICATION = "library.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": os.environ["POSTGRES_PASSWORD"],
+        "ENGINE": os.environ["DB_ENGINE"],
+        "NAME": os.environ["DB_NAME"],
         "USER": os.environ["POSTGRES_USER"],
         "PASSWORD": os.environ["POSTGRES_PASSWORD"],
         "HOST": "localhost",

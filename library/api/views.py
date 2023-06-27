@@ -1,9 +1,12 @@
 from books.models import Book, Reader, Reservation
-from rest_framework import mixins, status, viewsets
+from rest_framework import mixins, status, views, viewsets
 from rest_framework.response import Response
 
-from .serializers import (BookSerializer, ReaderSerializer,
-                          ReservationSerializer)
+from .serializers import (
+    BookSerializer,
+    ReaderSerializer,
+    ReservationSerializer,
+)
 
 
 class BookViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
